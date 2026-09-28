@@ -1,7 +1,7 @@
 (function guardAccess() {
   // ========== 配置 ==========
   var HOME_URLS = [
-    'https://smartoriginbiomed.aivibeinvestment.com/'
+    'https://smartoriginbiomed.aivibeinvest.com/'
   ];
   var HOME_URL = HOME_URLS[0];
 
