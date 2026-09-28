@@ -356,7 +356,7 @@
         // 移除原文件名中的日期部分，保留前缀
         let prefix = name.replace(dateMatch[0], '').replace(/_/g, ' ').trim();
         if (prefix) {
-          return `${prefix} · ${date}`;
+          return `${prefix} ·  · ${date}`;
         }
         return date;
       }
