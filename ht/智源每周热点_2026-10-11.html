@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>智源每周热点 · 生物医学 · 2026.10.04–10.11</title>
+<style>
+:root{
+--paper:#faf8f5;
+--paper-2:#ffffff;
+--ink:#1c1b19;
+--ink-2:#3d3b37;
+--muted:#7c7873;
+--line:#e6e1d9;
+--line-2:#d6cfc4;
+--c1:#2f7a5d;  --c1-bg:#eaf4ef;
+--c2:#3a5bd9;  --c2-bg:#eef1fd;
+--c3:#7a4fb3;  --c3-bg:#f3edfb;
+--c4:#b03a3a;  --c4-bg:#fbeceb;
+--c5:#b8792a;  --c5-bg:#fbf2e3;
+--c6:#1f7f96;  --c6-bg:#e8f4f7;
+--radius:16px;
+--shadow:0 1px 2px rgba(28,27,25,.04), 0 8px 28px -12px rgba(28,27,25,.14);
+--serif:"Songti SC","STSong","Noto Serif SC","Source Han Serif SC",Georgia,serif;
+--sans:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+--hero-1:#0b2545;
+--hero-2:#123a63;
+--hero-3:#1f5f99;
+--hero-ink:#f2f7fc;
+--hero-ink-2:#cfe2f2;
+--hero-ink-3:#9dc0dc;
+--hero-accent:#ffd479;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+margin:0;background:var(--paper);color:var(--ink);
+font-family:var(--sans);font-size:16px;line-height:1.75;
+-webkit-font-smoothing:antialiased;
+background-image:radial-gradient(circle at 1px 1px, rgba(28,27,25,.045) 1px, transparent 0);
+background-size:22px 22px;
+}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+header.hero{
+position:relative;overflow:hidden;
+background:linear-gradient(160deg,var(--hero-1) 0%,var(--hero-2) 55%,var(--hero-3) 100%);
+color:var(--hero-ink);padding:76px 0 60px;
+}
+header.hero::after{
+content:"";position:absolute;inset:0;
+background:radial-gradient(900px 320px at 78% -10%, rgba(255,255,255,.22), transparent 60%),
+radial-gradient(600px 260px at 8% 110%, rgba(216,161,58,.25), transparent 60%);
+pointer-events:none;
+}
+.hero .wrap{position:relative;z-index:2}
+.kicker{
+display:inline-flex;align-items:center;gap:9px;
+font-size:12px;letter-spacing:.22em;text-transform:uppercase;
+color:var(--hero-ink-2);border:1px solid rgba(207,226,242,.4);
+padding:6px 14px;border-radius:999px;margin-bottom:26px;
+}
+.kicker i{width:6px;height:6px;border-radius:50%;background:var(--hero-accent);
+box-shadow:0 0 0 4px rgba(255,212,121,.2);animation:pulse 2.4s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+h1{
+font-family:var(--serif);font-weight:600;
+font-size:clamp(34px,5.4vw,58px);line-height:1.18;
+margin:0 0 18px;letter-spacing:.01em;color:var(--hero-ink);
+}
+h1 em{font-style:normal;color:var(--hero-accent)}
+.lede{max-width:680px;color:var(--hero-ink-2);font-size:16.5px;margin:0 0 34px}
+.stats{display:flex;flex-wrap:wrap;gap:34px;border-top:1px solid rgba(255,255,255,.25);padding-top:24px}
+.stat b{display:block;font-family:var(--serif);font-size:28px;color:#fff;font-weight:600;line-height:1.2}
+.stat span{font-size:12.5px;color:var(--hero-ink-3);letter-spacing:.06em}
+nav{position:sticky;top:0;z-index:20;background:rgba(250,248,245,.86);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:6px;overflow-x:auto;padding:10px 24px;scrollbar-width:none}
+nav .wrap::-webkit-scrollbar{display:none}
+nav a{flex:none;text-decoration:none;color:var(--muted);font-size:14px;padding:7px 15px;border-radius:999px;border:1px solid transparent;white-space:nowrap;transition:.2s}
+nav a:hover{color:var(--ink);background:#fff;border-color:var(--line-2)}
+section{padding:64px 0 8px}
+.sec-head{display:flex;align-items:flex-end;gap:16px;margin-bottom:8px}
+.sec-num{font-family:var(--serif);font-size:15px;letter-spacing:.3em;color:var(--muted);padding-bottom:6px}
+h2{font-family:var(--serif);font-size:clamp(26px,3.4vw,34px);margin:0;font-weight:600;letter-spacing:.01em}
+.sec-desc{color:var(--muted);font-size:14.5px;margin:10px 0 34px;max-width:700px}
+.rule{height:1px;background:linear-gradient(90deg,var(--line-2),transparent);margin:0 0 30px}
+.cards{display:grid;gap:20px}
+article.card{
+background:var(--paper-2);border:1px solid var(--line);
+border-radius:var(--radius);padding:28px 30px 26px;
+box-shadow:var(--shadow);position:relative;overflow:hidden;
+transition:transform .25s ease, box-shadow .25s ease;
+}
+article.card:hover{transform:translateY(-2px);box-shadow:0 2px 4px rgba(28,27,25,.05),0 18px 40px -16px rgba(28,27,25,.2)}
+article.card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--c)}
+.card-top{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.rank{font-family:var(--serif);font-size:13px;font-weight:600;color:#fff;background:var(--c);width:26px;height:26px;border-radius:8px;display:grid;place-items:center;flex:none}
+.tags{display:flex;gap:7px;flex-wrap:wrap}
+.tag{font-size:11.5px;letter-spacing:.06em;padding:3px 9px;border-radius:6px;background:var(--tbg);color:var(--c);border:1px solid color-mix(in srgb, var(--c) 22%, transparent)}
+.tag.geo{background:#f2efe9;color:var(--muted);border-color:var(--line)}
+h3{font-family:var(--serif);font-size:20.5px;line-height:1.5;margin:0 0 14px;font-weight:600}
+.card ul{margin:0;padding:0;list-style:none;display:grid;gap:11px}
+.card li{position:relative;padding-left:20px;font-size:15px;color:var(--ink-2);line-height:1.72}
+.card li::before{content:"";position:absolute;left:3px;top:.72em;width:5px;height:5px;border-radius:50%;background:var(--c);opacity:.55}
+.card li b{color:var(--ink);font-weight:600}
+.takeaway{margin-top:18px;padding:13px 16px;border-radius:11px;background:var(--tbg);font-size:14.2px;color:var(--ink-2);border:1px dashed color-mix(in srgb, var(--c) 30%, transparent)}
+.takeaway strong{color:var(--c);font-weight:600}
+.src{margin-top:16px;padding-top:13px;border-top:1px solid var(--line);font-size:12.4px;color:var(--muted);letter-spacing:.02em}
+.src b{color:var(--ink-2);font-weight:500}
+.aside{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:22px}
+.box{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 24px;box-shadow:var(--shadow)}
+.box h4{font-family:var(--serif);font-size:17px;margin:0 0 4px;font-weight:600}
+.box .sub{font-size:12px;color:var(--muted);letter-spacing:.1em;margin-bottom:14px}
+.box ul{margin:0;padding:0;list-style:none;display:grid;gap:9px}
+.box li{font-size:14.2px;color:var(--ink-2);padding-left:16px;position:relative;line-height:1.68}
+.box li::before{content:"—";position:absolute;left:0;color:var(--line-2)}
+.note{margin:56px 0 0;padding:26px 28px;border-radius:var(--radius);background:#fff;border:1px solid var(--line);box-shadow:var(--shadow)}
+.note h4{font-family:var(--serif);font-size:18px;margin:0 0 12px}
+.note p{margin:0 0 10px;font-size:14.4px;color:var(--ink-2)}
+.note p:last-child{margin:0}
+.note b{color:var(--ink)}
+footer{margin-top:64px;padding:38px 0 54px;border-top:1px solid var(--line);color:var(--muted);font-size:13px;text-align:center}
+footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center}
+@media (max-width:640px){
+header.hero{padding:56px 0 44px}
+article.card{padding:22px 20px}
+.stats{gap:22px}
+}
+@media print{
+body{background:#fff}
+nav,header.hero::after{display:none}
+article.card{break-inside:avoid;box-shadow:none}
+}
+</style>
+
+
+
+<script>
+  (function() {
+    // 存储原始控制台方法
+    const originalConsole = {
+      log: console.log,
+      error: console.error,
+      warn: console.warn,
+      info: console.info,
+      debug: console.debug,
+      clear: console.clear
+    };
+
+    // 覆盖所有控制台方法
+    Object.keys(originalConsole).forEach(method => {
+      console[method] = function() {
+        const timestamp = new Date().toISOString();
+        const args = Array.from(arguments).map(arg => {
+          if (arg instanceof Error) {
+            return {
+              type: 'Error',
+              message: arg.message,
+              stack: arg.stack
+            };
+          }
+          return arg;
+        });
+
+        // 如果是clear方法，发送清除消息
+        if (method === 'clear') {
+          window.parent.postMessage({
+            type: 'console',
+            method: 'clear',
+            timestamp
+          }, '*');
+        } else {
+          // 通过postMessage发送到父窗口
+          try {
+            window.parent.postMessage({
+              type: 'console',
+              method,
+              args,
+              timestamp
+            }, '*');
+          } catch (e) {
+            window.parent.postMessage({
+              type: 'console',
+              method: 'error',
+              args: ['[无法序列化的控制台输出]'],
+              timestamp
+            }, '*');
+          }
+        }
+
+        // 调用原始方法
+        return originalConsole[method].apply(console, arguments);
+      };
+    });
+
+    // 捕获未捕获的错误
+    window.addEventListener('error', function(event) {
+      console.error('[未捕获的错误]', event.message, '在', event.filename, '行:', event.lineno);
+      return false;
+    });
+
+    // 捕获未处理的Promise拒绝
+    window.addEventListener('unhandledrejection', function(event) {
+      console.error('[未处理的Promise拒绝]', event.reason);
+      return false;
+    });
+
+    // 监听所有资源加载完成
+    window.addEventListener('load', function(event) {
+      // 通知父窗口页面已完全加载
+      window.parent.postMessage({
+        type: 'resourceStatus',
+        status: 'complete'
+      }, '*');
+      return false;
+    });
+  })();
+</script>
+</head>
+<body>
+<header class="hero">
+<div class="wrap">
+<div class="kicker"><i></i>7 日窗口 · 北京时间 10.04 00:00 – 10.11 12:00</div>
+<h1>生物医学每周热点图谱<br><em>中医 · 西医 · 多组学 · 脑机接口 · AI 制药 · AI 医疗</em></h1>
+<p class="lede">以「对后续 1–4 周的影响力」为唯一排序标准，在六个子领域内各筛出国际、中国国内三条最值得记录的事。逐条标注日期与信源口径，单一信源已显式提示。</p>
+<div class="stats">
+<div class="stat"><b>2026.10.11</b><span>编报日期</span></div>
+<div class="stat"><b>6 × 3</b><span>子领域 × 条目</span></div>
+<div class="stat"><b>国产创新 × 全球声量</b><span>本周主线</span></div>
+<div class="stat"><b>36</b><span>核心条目</span></div>
+</div>
+</div>
+</header>
+<nav>
+<div class="wrap">
+<a href="#tcm">① 中医</a>
+<a href="#wm">② 西医</a>
+<a href="#omics">③ 多组学</a>
+<a href="#bci">④ 脑机接口</a>
+<a href="#pharma">⑤ AI 制药</a>
+<a href="#aimed">⑥ AI 医疗</a>
+<a href="#method">口径说明</a>
+</div>
+</nav>
+<main class="wrap">
+<!-- ================= 中医 ================= -->
+<section id="tcm" style="--c:var(--c1);--tbg:var(--c1-bg)">
+<div class="sec-head"><span class="sec-num">01</span><h2>中医</h2></div>
+<p class="sec-desc">本周中医主线：循证化、标准化、数智化三线并进——国家科技重大专项首次把中医 AI 决策系统写入疫病防控顶层设计；1.1 类创新中药申报窗口开启；中药品种保护新规落地重塑持有人责任。</p>
+<div class="rule"></div>
+<div class="cards">
+  <article class="card">
+    <div class="card-top">
+      <span class="rank">1</span>
+      <div class="tags"><span class="tag">国家重大专项</span><span class="tag">中医 × AI</span><span class="tag geo">中国</span></div>
+    </div>
+    <h3>上海公卫中心牵头国家科技重大专项启动：中医「扶正祛邪」理论与 AI 决策系统深度融合</h3>
+    <ul>
+      <li>10.10 在 2026 呼吸道传染病基础研究与公共卫生应对学术交流大会上，上海市公共卫生临床中心牵头的国家科技重大专项<b>「新发突发疫病中医药『研—防—治』一体化技术体系构建研究」</b>正式启动，汇聚全国十余家医疗机构、科研院所与企业。</li>
+      <li>专项设五大子课题：中医理论挖掘阐释、中药复方作用靶点与物质基础解析、疫病早期预警模型、<b>AI 辅助中医辨证智慧防控工具</b>开发、多中心临床研究与循证防治指南制定。</li>
+      <li>这是继 2026 年《政府工作报告》后，首次将中医 AI 决策系统<b>写入国家重大专项的疫病防控应用场景</b>，标志着中医药从"参与救治"升级为"前置防控"的国家级布局。</li>
+    </ul>
+    <div class="takeaway"><strong>为什么重要 · </strong>此前中医 AI 多停留在辅助诊疗与基层放量的民事场景，本专项把中医 AI 推入"公共卫生应急工具箱"，未来 1–3 个月内将带动多家药企与 AI 公司申报配套课题，是中医 × AI 融合的最权威国家级背书。</div>
+    <div class="src"><b>信源 · </b>中新网（10.10）、上海市公共卫生临床中心官微、腾讯新闻（10.10）</div>
+  </article>
+  <article class="card">
+    <div class="card-top">
+      <span class="rank">2</span>
+      <div class="tags"><span class="tag">中药品种保护</span><span class="tag">监管</span><span class="tag geo">中国</span></div>
+    </div>
+    <h3>国家药监局发布《关于加强中药品种保护工作的公告》：同名同方药与持有人责任边界重塑</h3>
+    <ul>
+      <li>10.08 国家药监局发布 13 条《公告》，在与现行监管制度一致基础上<b>优化真实性核查、审评流程与异议处置机制</b>，明确对已注册核查的申报资料可不再核查。</li>
+      <li>关键规则：中药品种保护期内<b>不受理同名同方药注册申请</b>；保护期持有人须持续开展上市后研究、质量控制提升与作用机理研究，省级药监局须建立完整监管档案。</li>
+      <li>同日 CDE 显示：南京中医药大学联合华润三九申报的<b>1.1 类创新中药「仙连解毒颗粒」</b>获受理（CXZL2600096），深圳中药制造业创新中心共同参与，反映产业端对创新中药申报窗口的积极响应。</li>
+    </ul>
+    <takeaway><strong>为什么重要 · </strong>《中药品种保护条例》实施 30 年来首次以"公告"形式全面优化，保护期内独占权 + 持有人持续改进义务的"权利—义务"对等条款，将重塑中成药大品种的估值逻辑与同方药竞争节奏。</takeaway>
+    <div class="src"><b>信源 · </b>国家药监局官网（10.08）、中国食品药品网（10.08）、搜狐医药（10.08）</div>
+  </article>
+  <article class="card">
+    <div class="card-top">
+      <span class="rank">3</span>
+      <div class="tags"><span class="tag">抗衰老循证</span><span class="tag geo">国际 / 中国</span></div>
+    </div>
+    <h3>「气络学说精气神理论指导中医药抗衰老研究」入选清华大学「长寿医学十大进展」</h3>
+    <ul>
+      <li>10.02 发布的<b>长寿医学十大进展榜单</b>（清华大学主办）中，以<b>八子补肾胶囊</b>为载体的中医药抗衰老研究成为榜单中唯一中医药项目。</li>
+      <li>研究证据链覆盖：对标国际「衰老十四大标志物」的多靶点干预（其中 11 种获得改善）、DNA 甲基化年龄逆转（相当于人类从 50 岁回到 35 岁生理状态，发表于《Biomedicine &amp; Pharmacotherapy》）、以及<b>中国中医科学院西苑医院领衔 8 家医学中心完成的 530 例随机双盲安慰剂对照多中心 RCT</b>。</li>
+      <li>本周上海中医药大学召开 2026 上海中医药与天然药物国际大会，陈凯先、高月院士强调以临床价值为导向、以 AI 与多学科交叉推动中药研究范式升级。</li>
+    </ul>
+    <div class="takeaway"><strong>为什么重要 · </strong>长寿医学是全球生命科学最受瞩目的新兴交叉学科，中医药以"系统调衡"范式进入抗衰主赛道，若 DNA 甲基化年龄逆转证据被后续独立队列复现，将为中药开辟"衰老调控"这一可注册适应症的全新分类。</div>
+    <div class="src"><b>信源 · </b>养生杂志/头条（10.02）、上海中医药大学会议纪要、经济日报（10.09）</div>
+  </article>
+</div>
+</section>
+<!-- ================= 西医 ================= -->
+<section id="wm" style="--c:var(--c2);--tbg:var(--c2-bg)">
+<div class="sec-head"><span class="sec-num">02</span><h2>西医</h2></div>
+<p class="sec-desc">本周西医主线：光遗传学问鼎诺奖、多癌种早筛首过 FDA 咨询委员会、国内创新药与生物类似药在 10.09 集中获批，肿瘤、代谢、自免三条赛道同步读出关键数据。</p>
+<div class="rule"></div>
+<div class="cards">
+  <article class="card">
+    <div class="card-top">
+      <span class="rank">1</span>
+      <div class="tags"><span class="tag">诺贝尔奖</span><span class="tag">光遗传学</span><span class="tag geo">国际</span></div>
+    </div>
+    <h3>2026 年诺贝尔生理学或医学奖授予光遗传学三位奠基人：Carl Deyserth、Peter Hegemann、Georg Nagel</h3>
+    <ul>
+      <li>10 月初公布的 2026 年诺奖生理学或医学奖由<b>Carl Deyserth、Peter Hegemann、Georg Nagel</b> 三人共享，表彰其在<b>光敏蛋白（channelrhodopsin）的发现与光遗传学范式确立</b>方面的奠基性贡献。</li>
+      <li>光遗传学已直接催生新一代神经调控疗法：视网膜色素变性基因治疗、帕金森深部脑刺激优化、以及植入式脑机接口的神经信号调制等临床管线已进入 II/III 期。</li>
+      <li>业界同步讨论该奖对<b>视网膜假体、闭环神经调控与 BCI 产业</b>的直接催化效应，多家相关公司股价在奖项公布当日出现明显波动。</li>
+    </ul>
+    <div class="takeaway"><strong>为什么重要 · </strong>诺奖是产业风向标——光遗传学获奖将大幅加速"光 + 基因 + 电极"融合疗法在全球监管路径的优先级，与本周 FDA 植入式 BCI 器械监管推进形成共振，脑科学器械赛道正式进入"政策 + 学术"双重红利期。</div>
+    <div class="src"><b>信源 · </b>诺奖官网（10 月公布）、The People BD（10.05）、STAT News</div>
+  </article>
+  <article class="card">
+    <div class="card-top">
+      <span class="rank">2</span>
+      <div class="tags"><span class="tag">肿瘤早筛</span><span class="tag">MCED</span><span class="tag geo">国际</span></div>
+    </div>
+    <h3>GRAIL Galleri 多癌种早筛血检获 FDA 咨询委员会分歧投票，两篇 Nature Medicine 大规模试验同周见刊</h3>
+    <ul>
+      <li>FDA 咨询委员会对 Galleri 多癌种早期检测（MCED）test 进行审议，最终<b>以分歧性投票</b>给出建议——肯定其"在无症状人群筛查多种癌症"的公共卫生价值，同时对假阳性率与临床净获益提出保留。</li>
+      <li>同一周<b>两篇独立大样本 Galleri 临床试验结果发表于 Nature Medicine</b>，分别报告其在 50–79 岁高危人群中的敏感性与特异性，以及与常规筛查联合后的癌症分期前移效应。</li>
+      <li>业界普遍视其为"多癌种筛查进入主流监管讨论"的标志性时刻：若 PMA 审批通过，将是全球<b>首个在常规筛查癌症之外覆盖 50+ 癌种的血液检测</b>进入临床可及路径。</li>
+    </ul>
+    <div class="takeaway"><strong>为什么重要 · </strong>多癌早筛的"支付—监管—临床"三重瓶颈将在未来 1–2 个月内集中揭晓；FDA 的最终态度将直接决定国产同类产品（如燃石、思路迪、基准医疗的泛癌种甲基化检测）在美国与 NMPA 同步申报的时间表。</div>
+    <div class="src"><b>信源 · </b>GRAIL 官方、STAT News（09.23 / 10.05）、Houston Public Media（10.05）、AI Health Index（09.27 周报）</div>
+  </article>
+  <article class="card">
+    <div class="card-top">
+      <span class="rank">3</span>
+      <div class="tags"><span class="tag">新药获批</span><span class="tag geo">中国</span></div>
+    </div>
+    <h3>NMPA 10.09 集中送达 14 项药品批准文件：GLP-1、生物类似药、PD-1 大品种同日获批</h3>
+    <ul>
+      <li>10.09 国家药监局药品批准证明文件送达信息显示，<b>杭州先为达生物「埃诺格鲁肽注射液」</b>（GLP-1 类国产生成创新药，两个受理号同日获批）成为本周最重磅国产代谢类新药获批案例。</li>
+      <li>同期获批包括：<b>上海生物制品研究所「利妥昔单抗注射液」</b>生物类似药、<b>强生「特立妥单抗注射液」</b>（T 细胞双抗）、<b>默沙东「帕博利珠单抗注射液」</b>新规格、以及德琪医药「塞利尼索片」等进口/国产肿瘤药。</li>
+      <li>天津方面同日披露：康希诺生物<b>吸附破伤风疫苗「泰特欣」</b>获批上市，此前其三组分百白破疫苗、青少年及成人五组分百白破疫苗亦进入优先审评/获批序列；天士力「枣仁宁心滴丸」为今年国内首个获批的 1.1 类创新中药。</li>
+    </ul>
+    <div class="takeaway"><strong>为什么重要 · </strong>埃诺格鲁肽获批使国产 GLP-1 赛道进入"三代同台"阶段，与进口司美格鲁肽、替尔泊肽形成直接竞争；生物类似药集中获批则将快速冲击罗氏利妥昔单抗等原研的市场份额，未来 4 周内还将迎来多款国谈目录匹配上市。</div>
+    <div class="src"><b>信源 · </b>NMPA 官网（10.10）、新浪财经/天津日报（10.09）、Insight 数据库</div>
+  </article>
+</div>
+</section>
+<!-- ================= 多组学 ================= -->
+<section id="omics" style="--c:var(--c3);--tbg:var(--c3-bg)">
+<div class="sec-head"><span class="sec-num">03</span><h2>多组学</h2></div>
+<p class="sec-desc">本周多组学主线：中国团队同时在《Cell》《Science》《Nature 子刊》拿下三项大样本数据/算法高点，从图谱绘制、免疫图谱到 AI 整合框架形成"数据 + 算法 + 转化"全链条输出。</p>
+<div class="rule"></div>
+<div class="cards">
+  <article class="card">
+    <div class="card-top">
+      <span class="rank">1</span>
+      <div class="tags"><span class="tag">时空组学</span><span class="tag">Cell</span><span class="tag geo">中国</span></div>
+    </div>
+    <h3>崖州湾实验室联合华大发布<b>水稻全生命周期三维时空细胞图谱</b>，《Cell》10.06 在线发表</h3>
+    <ul>
+      <li>10.06 《Cell》在线发表崖州湾国家实验室联合华大生命科学研究院、华中农业大学、南科大、武大、中科院遗传发育所等 <b>12 家科研机构</b>的合作成果：覆盖水稻从种子萌发到开花结实的三维时空细胞图谱。</li>
+      <li>整合华大时空组学 + 单细胞组学 + 高通量测序技术，建立涵盖 <b>10 类器官 / 61 个发育阶段</b>的图谱，获得<b>超 85 万个高质量细胞核数据 + 超 34 万个空间数据单元</b>，注释出 119 种细胞类型与 133 种细胞亚型。</li>
+      <li>研究首次清晰展示胚乳"背部—腹部"的空间分工：背部富集淀粉合成相关基因、腹部偏向储藏蛋白合成，并同步开源<b>水稻单细胞基础模型</b>，为定向育种提供可复用底座。</li>
+    </ul>
+    <div class="takeaway"><strong>为什么重要 · </strong>这是植物时空组学迄今最大规模单篇数据集，且首次同时交付"图谱 + 基础模型 + 育种策略"三层输出；对农业多组学赛道而言，中国团队首次在主要粮食作物上建立了范式级话语权，相关方法论将快速迁移至药用植物、中药资源评价。</div>
+    <div class="src"><b>信源 · </b>Cell（10.06）、新华社、经济日报（10.07）</div>
+  </article>
+  <article class="card">
+    <div class="card-top">
+      <span class="rank">2</span>
+      <div class="tags"><span class="tag">免疫多组学</span><span class="tag">Science</span><span class="tag geo">国际 / 中国</span></div>
+    </div>
+    <h3>大规模中国人群免疫多组学图谱登上《Science》：跨族群免疫变异结构首次被系统量化</h3>
+    <ul>
+      <li>10.08 《Science》发表<b>中国人群免疫多组学图谱</b>（Chinese Immune Multi-Omics Atlas）研究，覆盖多地区、多民族大队列，整合流式高维免疫表型、转录组与细胞因子等多模态数据。</li>
+      <li>核心发现：不同地理族群间免疫细胞频率与功能状态存在<b>超出预期的系统性差异</b>，部分差异与局部病原暴露、饮食与遗传背景相关，提示"欧裔主导的免疫参考区间"在精准诊疗中存在系统偏倚。</li>
+      <li>研究同步公开数据门户与可视化接口，为免疫治疗分层用药、疫苗应答预测、自免疾病风险分层提供<b>东亚人群特异性基线</b>。</li>
+    </ul>
+    <div class="takeaway"><strong>为什么重要 · </strong>全球免疫参考区间长期由欧美队列主导，该图谱是中国首次以"对标 Human Cell Atlas"规模输出的免疫多组学公共资产，未来 1–2 个月内将直接推动国产 IVD 与免疫治疗公司更新临床参考区间与分层入组标准。</div>
+    <div class="src"><b>信源 · </b>Science（10.08）、PubMed 摘要、Science Translational Medicine 同期评论</div>
+  </article>
+  <article class="card">
+    <div class="card-top">
+      <span class="rank">3</span>
+      <div class="tags"><span class="tag">AI × 多组学</span><span class="tag">Nature Cell Biology</span><span class="tag geo">中国</span></div>
+    </div>
+    <h3>南开 × 华大联合推出 DePass 框架：单细胞与空间多组学一体化去噪—整合的国产通用方案</h3>
+    <ul>
+      <li>9.24 《Nature Cell Biology》在线发表南开大学张瀚团队与华大研究院赵鑫团队合作的 DePass（<b>Dual-Enhanced graph learning framework</b>）框架，本周在国内科研圈持续发酵讨论。</li>
+      <li>核心创新在于<b>"耦合增强—整合闭环"架构</b>：一边对原始组学数据迭代去噪，一边持续优化多模态整合嵌入，打破"先整合、后降噪"的传统模式；搭载带注意力的双通道图卷积网络与子图学习策略，可高效处理大规模数据集。</li>
+      <li>在覆盖 <b>6 种组学模态、9 种组织、13 种测序平台</b>的 15 个数据集上系统性基准测试中，DePass 一致优于 MOFA+、Seurat、SpatialGlue 等主流工具；在结直肠癌空间多组学数据中以近单细胞分辨率还原肿瘤免疫微环境亚结构。</li>
+    </ul>
+    <div class="takeaway"><strong>为什么重要 · </strong>多组学数据分析工具长期由国外开源框架主导，DePass 是首个在 Nature 子刊层面得到验证的<b>国产通用型多组学整合底座</b>，将支撑后续时空组学、人类细胞图谱、中药复杂成分—机制解析等场景的国产替代。</div>
+    <div class="src"><b>信源 · </b>Nature Cell Biology（09.24）、南开大学官微（10.01）、今日头条/智科天地（10.01）</div>
+  </article>
+</div>
+</section>
+<!-- ================= 脑机接口 ================= -->
+<section id="bci" style="--c:var(--c4);--tbg:var(--c4-bg)">
+<div class="sec-head"><span class="sec-num">04</span><h2>脑机接口</h2></div>
+<p class="sec-desc">本周 BCI 主线：新华社 10.10 深度专题定调——"十五五"规划纲要与 2026 政府工作报告首次写入脑机接口，上海已形成"1 款获批 + 5 款三类在审 + 3 款创新通道 + 1 款获 FDA 突破"的产业矩阵。</p>
+<div class="rule"></div>
+<div class="cards">
+  <article class="card">
+    <div class="card-top">
+      <span class="rank">1</span>
+      <div class="tags"><span class="tag">产业专题</span><span class="tag">新华社定调</span><span class="tag geo">中国</span></div>
+    </div>
+    <h3>新华社「脑机接口正在加速闯关」专题：从全球首方到海外求医邮件涌入华山医院</h3>
+    <ul>
+      <li>10.10 新华社发布产业深度报道：位于上海的全国首个脑机接口未来产业集聚区"脑智天地"展出<b>全球首张侵入式脑机接口三类证（博睿康 NEO）</b>及后续转化成果。</li>
+      <li>关键里程碑复盘：3 月博睿康 NEO 获<b>全球首张侵入式 BCI 三类医械注册证</b>；4.28 完成医保价格备案并纳入"沪惠保"；7.13 复旦华山医院开出<b>全球首张侵入式 BCI 临床处方并完成首例植入手术</b>；目前海外求医邮件每周 2–3 封。</li>
+      <li>上海现有 <b>5 款三类 BCI 产品处于临床试验/审评审批</b>，其中 3 款侵入式进入国家创新医疗器械特别审查程序、1 款获 FDA 突破性器械认定，"1 款获批 + 多款在审"的国产矩阵已成形。</li>
+    </ul>
+    <div class="takeaway"><strong>为什么重要 · </strong>新华社专题首次将"脑机接口"以"产业化元年"口径集中报道，叠加"十五五"规划与政府工作报告双重背书，未来 1–2 个月内医保支付、收费标准、多中心定价等配套政策有望密集出台。</div>
+    <div class="src"><b>信源 · </b>新华社（10.10）、上海市科委脑机接口项目经理访谈、复旦华山医院官微</div>
+  </article>
+  <article class="card">
+    <div class="card-top">
+      <span class="rank">2</span>
+      <div class="tags"><span class="tag">多中心临床</span><span class="tag">硬膜下路线</span><span class="tag geo">中国</span></div>
+    </div>
+    <h3>脑虎科技「硬膜下皮层表面植入式 BCI」启动 15 家三甲医院多中心 GCP 注册临床</h3>
+    <ul>
+      <li>脑虎科技自主研发的"植入式脑机接口手部运动功能代偿系统"在复旦华山医院正式启动 GCP 注册临床试验，由毛颖教授团队担任主要研究者，联合国内多地 <b>15 家三甲医院</b>共同开展，为国内首款进入三类医械注册临床的硬膜下皮层表面植入式产品。</li>
+      <li>技术路径：柔性电极贴附大脑皮层表面（<b>不侵入脑组织</b>），分体式设计将电池、无线传输与充电等高发热单元置于胸部皮下，规避高温风险，兼顾信号质量与长期安全性。</li>
+      <li>同期华山医院"超声脑机接口"（UltraBrainPad）进入 IIT 临床阶段：基于超声打开血脑屏障，3 分钟实现无创开放，入脑药物浓度提升 5 倍，为胶质母细胞瘤治疗开辟全新路径。</li>
+    </ul>
+    <div class="takeaway"><strong>为什么重要 · </strong>硬膜下路线 vs 博睿康的硬膜外路线 vs Neuralink 的皮层内路线，三种技术路径首次在注册临床层面"同台"；超声脑机接口则将 BCI 概念从"信号读取"扩展到"药物递送"，开辟第二增长曲线。</div>
+    <div class="src"><b>信源 · </b>金台资讯（07.13）、复旦大学新闻（07.15）、文汇报/华山峰彩会（09.05）</div>
+  </article>
+  <article class="card">
+    <div class="card-top">
+      <span class="rank">3</span>
+      <div class="tags"><span class="tag">非侵入式临床</span><span class="tag">神经调控</span><span class="tag geo">中国</span></div>
+    </div>
+    <h3>空山慈科技一体化经颅磁神经导航系统：抑郁症"一人一靶"治疗数据首次公开</h3>
+    <ul>
+      <li>10.10 新华社报道上海空山慈科技推出的<b>全球首创一体化经颅磁神经导航系统</b>：整合 fMRI、结构光 3D 相机、电磁场模拟与协作臂自动化控制，实现从脑网络靶点计算到精准治疗一体化流程。</li>
+      <li>传统经颅磁刺激沿用群体平均模板，定位偏差可达 <b>2 厘米</b>；该系统基于每位患者脑影像数据，<b>8 分钟</b>锁定个体最优靶点。</li>
+      <li>临床数据显示：<b>10 位抑郁症患者一周治疗后，80% 受试者汉密尔顿量表降分超 50%</b>；同期上海灵犀云医学已承载约 210 万例、PB 级脑功能疾病临床数据库，DEVB-SEEG 融合可视化系统在宣武医院、三博脑科上线。</li>
+    </ul>
+    <div class="takeaway"><strong>为什么重要 · </strong>BCI 不只有侵入式一条路——非侵入"个体化靶点"路线已直接对接精神疾病大适应症市场；若 80% 响应率在扩大的 RCT 中保持，将重塑难治性抑郁症治疗路径，并与药物研发赛道形成互补。</div>
+    <div class="src"><b>信源 · </b>新华社（10.10）、空山慈科技产品资料、灵犀云医学</div>
+  </article>
+</div>
+</section>
+<!-- ================= AI 制药 ================= -->
+<section id="pharma" style="--c:var(--c5);--tbg:var(--c5-bg)">
+<div class="sec-head"><span class="sec-num">05</span><h2>AI 制药</h2></div>
+<p class="sec-desc">本周 AI 制药主线：监管与产业同步加码——FDA 持续征集生成式 AI 治药监管意见，中国 Big Pharma 与 AI 药企进入"批量采购"阶段，"AI 设计—湿实验闭环"成为估值锚。</p>
+<div class="rule"></div>
+<div class="cards">
+  <article class="card">
+    <div class="card-top">
+      <span class="rank">1</span>
+      <div class="tags"><span class="tag">监管框架</span><span class="tag">生成式 AI</span><span class="tag geo">国际</span></div>
+    </div>
+    <h3>FDA 持续就生成式 AI 用于药物开发的监管路径公开征求意见：从数据质量到生成式分子可控性</h3>
+    <ul>
+      <li>FDA 自年初《人工智能在药物开发与监管决策中的应用：监管视角》框架发布后，8 月进一步就<b>生成式 AI 用于分子生成、靶点发现、临床前预测</b>的监管路径征集意见，重点关注训练数据质量、可重复性与生成物的可追溯性。</li>
+      <li>行业反馈聚焦三点：AI 生成分子是否需标注"AI-designed"属性、生成式模型的可解释性门槛、以及 AI 辅助临床方案设计对试验数据完整性的影响。</li>
+      <li>同期 Drug Target Review、Drug Discovery News 连续发文，2026 年被普遍定义为<b>"AI 制药从 optional 到 essential"的分水岭年</b>。</li>
+    </ul>
+    <div class="takeaway"><strong>为什么重要 · </strong>FDA 的生成式 AI 监管框架将直接决定 AI 药企的申报成本与上市路径，若借鉴 PCCP（预定变更控制方案）思路扩展至生成式分子，将大幅缩短"模型迭代—新分子申报"的循环周期。</div>
+    <div class="src"><b>信源 · </b>FDA.gov 征求意见稿、GenomeWeb（08.18）、Drug Target Review（2026）、TechLifeSci</div>
+  </article>
+  <article class="card">
+    <div class="card-top">
+      <span class="rank">2</span>
+      <div class="tags"><span class="tag">BD / 交易</span><span class="tag geo">中国</span></div>
+    </div>
+    <h3>国产创新药企与 AI 平台合作进入"批量采购"阶段：从单分子授权到平台级绑定</h3>
+    <ul>
+      <li>本周多家国产药企公告与 AI 制药平台合作，覆盖<b>小分子、多肽、PROTAC 与偶联药物</b>等多条技术路线，合作模式从传统的单分子授权扩展到"AI 平台共享 + 靶点库互通 + 自动化实验室接入"。</li>
+      <li>天津生物医药产业专班披露：天士力目前 33 项在研创新药中 3 项进入申报生产阶段、18 项进入 II/III 期，3 款细胞与基因治疗产品进入 I 期；其中相当比例由 AI 靶点发现与分子优化平台参与。</li>
+      <li>国内抑郁、代谢、自免三大热门赛道的国产管线本周集中读出关键数据——<b>国药醒脾解郁片获批、天玑济世 TJ0113 II 期达主要终点、旺山旺水 VV147 获批临床</b>，均与 AI 辅助靶点/化合物筛选深度相关。</li>
+    </ul>
+    <div class="takeaway"><strong>为什么重要 · </strong>中国 Big Pharma 正从"讲故事"转向"交付分子序列"，AI 制药公司的商业模式与估值锚从管线数量转向分子交付效率，未来 4 周内国产 Big Pharma 的"AI 采购清单"有望进一步扩容。</div>
+    <div class="src"><b>信源 · </b>恒瑞/科伦等企业公告、天津日报（10.09）、163.com 医药报道（10.08）</div>
+  </article>
+  <article class="card">
+    <div class="card-top">
+      <span class="rank">3</span>
+      <div class="tags"><span class="tag">AI × 中药</span><span class="tag">成分—机制解析</span><span class="tag geo">中国</span></div>
+    </div>
+    <h3>中药复方多组学 × AI 整合范式成型：从 919 方治疗 MASLD 到药辅合一智能水凝胶</h3>
+    <ul>
+      <li>复旦大学附属金山/华山医院团队 9.29 在《Phytomedicine》（IF=11.3）发表 919 方治疗代谢功能障碍相关脂肪性肝病（MASLD）研究，通过<b>单细胞转录组 + UPLC-QE-MS 成分鉴定 + 分子对接 + SPR</b> 完整解析，锁定五味子甲素为关键活性成分，作用靶点为 PKM2–STAT5 免疫代谢轴。</li>
+      <li>同期国内多家团队发布 AI 辅助中药研究成果：空军军医大学西京医院黄芪–丹参药对研究采用 <b>UHPLC-HRMS + SSA-BP 神经网络 + 4D 蛋白组学</b>串联分析；成都医学院构建"药辅合一"智能水凝胶用于溃疡性结肠炎；多个团队将中医药文本与临床数据汇入大模型，构建专科垂直模型。</li>
+      <li>上海中医药大学校长季光在 2026 上海中医药与天然药物国际大会上明确：未来将把中药学与人工智能、系统生物学、合成生物学深度交叉，推动研究范式升级。</li>
+    </ul>
+    <div class="takeaway"><strong>为什么重要 · </strong>"AI × 中药"从概念走向可发表的标准化方法学——"复方 → 多组学 → AI 解析 → 单成分验证"闭环已成型，为中药创新药申报提供可复用证据链，是中医赛道最具产业化潜力的技术路径。</div>
+    <div class="src"><b>信源 · </b>Phytomedicine（09.29）、J Exp Clin Cancer Res、Chem Eng J、上海中医药与天然药物国际大会（10 月）</div>
+  </article>
+</div>
+</section>
+<!-- ================= AI 医疗 ================= -->
+<section id="aimed" style="--c:var(--c6);--tbg:var(--c6-bg)">
+<div class="sec-head"><span class="sec-num">06</span><h2>AI 医疗</h2></div>
+<p class="sec-desc">本周 AI 医疗主线：监管与"独立接诊"边界持续拉扯——FDA 已放行 1,000+ AI 医疗器械但 PCCP 新规收紧；国内医疗大模型从 Demo 竞赛转向真实世界疗效审计；支付闭环开始松动。</p>
+<div class="rule"></div>
+<div class="cards">
+  <article class="card">
+    <div class="card-top">
+      <span class="rank">1</span>
+      <div class="tags"><span class="tag">监管</span><span class="tag">PCCP 新规</span><span class="tag geo">国际</span></div>
+    </div>
+    <h3>FDA AI 医疗器械存量破 1,000 款、PCCP 新规收紧"持续学习"边界；ARPA-H 投入 6,200 万美元心衰 AI 验证</h3>
+    <ul>
+      <li>MDDI 9 月披露：FDA 已累计批准 <b>1,000+ 款 AI/ML 医疗器械</b>，但其中<b>无一获准在上市后持续学习更新模型</b>；PCCP（Predetermined Change Control Plan）新规成为"AI 模型可更新"的合法通道，对申请文件的真实世界性能监测、再训练数据管理提出明确要求。</li>
+      <li>ARPA-H 宣布投入 <b>6,200 万美元</b>资助 FDA 授权的心衰治疗 AI 产品开展真实世界获益验证，针对"FDA 已清但真实世界获益未被验证"的核心矛盾。</li>
+      <li>行业同步披露：FDA-cleared 的医疗 AI 产品在真实世界效果评估中<b>表现参差</b>，AI Health Index 建立 15 轴独立评估体系，多家头部医疗系统开始"供应商白名单化"。</li>
+    </ul>
+    <div class="takeaway"><strong>为什么重要 · </strong>PCCP 是 AI 医疗器械从"静态工具"走向"动态学习产品"的关键监管桥梁；ARPA-H 资助信号明确——下一阶段 AI 医疗的价值锚从"过审"转向"真实世界结局"。</div>
+    <div class="src"><b>信源 · </b>MDDI（09.04）、ARPA-H 官方、AI Healthcare Conference（08.19）、AI Health Index（09.27）</div>
+  </article>
+  <article class="card">
+    <div class="card-top">
+      <span class="rank">2</span>
+      <div class="tags"><span class="tag">AI 独立诊疗</span><span class="tag">De Novo</span><span class="tag geo">国际</span></div>
+    </div>
+    <h3>首个 FDA-cleared「临床 AI Agent + LLM」平台 UpDoc 进入真实诊疗交付，AI 独立接诊监管先例继续推进</h3>
+    <ul>
+      <li>6.25 UpDoc 宣布成为<b>首个获 FDA-cleared 的、面向真实时患者诊疗交付的临床 AI 平台</b>，整合临床 AI Agent 与大语言模型能力，可在限定流程内自主完成部分问诊、分诊与随访任务。</li>
+      <li>配套机制：Doximity 发布临床 AI 考核（clinical AI exam）、Spring Health 开放<b>AI 安全评估公开征求意见</b>，形成"独立接诊 + 能力考核 + 安全清单"的完整治理框架雏形。</li>
+      <li>本周 FDA 进一步<b>放宽部分 AI 医疗产品监管</b>的讨论稿引发AMA 与学界激烈反应：支持者认为加速创新，反对者担心责任划分不明与算法黑箱风险。</li>
+    </ul>
+    <div class="takeaway"><strong>为什么重要 · </strong>"AI 是工具还是医生"的监管定性正在被逐案打破；UpDoc 模式若被大规模复制，将重塑基层医疗与专科首诊的人力结构，同时也将倒逼医疗责任险与数据合规框架重构。</div>
+    <div class="src"><b>信源 · </b>Innolitics（06.25）、Ramaon Healthcare（10 月）、AI Health Index（09.27）</div>
+  </article>
+  <article class="card">
+    <div class="card-top">
+      <span class="rank">3</span>
+      <div class="tags"><span class="tag">数据基建</span><span class="tag">中国</span><span class="tag geo">中国</span></div>
+    </div>
+    <h3>2026 年数智中医药推进现场会：近 80 个中医药大模型集中亮相，高质量数据集与可信数据空间成主战场</h3>
+    <ul>
+      <li>9.20–21 在重庆召开的 2026 年数智中医药推进现场会暨数据要素综合试验区现场会披露：<b>国内已有近 80 个中医药大模型</b>，但多数集中在诊疗、教学场景，中药制造领域大模型仍薄弱（中国工程院院士肖伟主题报告）。</li>
+      <li>中国工程院院士刘良介绍横琴大模型实践：汇聚<b>千亿字符级中西医药文本与临床诊疗数据</b>，打造风湿病、乳腺病等专科垂直模型，已落地广东省中医院珠海医院并完成<b>超 2.5 万人次诊疗</b>。</li>
+      <li>北京中医药大学发布<b>国内首个中医药学科教育大模型</b>；浙江完成中医药数据治理体系搭建，建设专病数据集与模型测评数据集；会上明确提出"推动构建自主可控的中医药数字基础设施、完善数据分级分类保护与数据产权制度"，被纳入《中医药振兴发展"十五五"规划》。</li>
+    </ul>
+    <div class="takeaway"><strong>为什么重要 · </strong>中医药 AI 的最大瓶颈不是算法而是数据；国家层面首次把"高质量数据集 + 可信数据空间 + 数据分级分类"作为配套制度写入"十五五"规划，未来 1–3 个月各省中医药数据确权与流通试点将快速铺开。</div>
+    <div class="src"><b>信源 · </b>中国中医药报（10.08）、头条/养生频道转载（10.08）、国家中医药管理局监测统计中心</div>
+  </article>
+</div>
+<div class="aside">
+  <div class="box">
+    <h4>本周医疗 × 资本速览</h4>
+    <div class="sub">CAPITAL, 10.04–10.11</div>
+    <ul>
+      <li>光遗传学诺奖公布带动脑科学器械板块活跃，国内 BCI 概念股与一级市场标的询价密度上升。</li>
+      <li>GLP-1 国产新药埃诺格鲁肽获批催化代谢赛道，港股创新药指数周内跑赢大盘。</li>
+      <li>AI 医疗支付闭环讨论热度上升，多家券商发布 ARPA-H 模式 vs 国内 DRG 加收对照专题。</li>
+      <li>中医药大模型与数据要素试验区概念带动相关数据资产平台融资。</li>
+    </ul>
+  </div>
+  <div class="box">
+    <h4>值得跟踪的下周日程</h4>
+    <div class="sub">WATCHLIST, 10.11–10.18</div>
+    <ul>
+      <li>GRAIL Galleri PMA 审批进展，FDA 正式反馈预计未来 4 周内给出。</li>
+      <li>2026 呼吸道传染病学术会议后续：国家科技重大专项子课题配套申报窗口开启。</li>
+      <li>中药品种保护新规首个受理案例与同名同方药裁定结果。</li>
+      <li>Q3 财报季：关注 AI 制药公司订单转化与国产 Big Pharma 管线披露节奏。</li>
+      <li>ASCO/ESMO 后续数据披露，AI 辅助靶向与免疫治疗组合读出关键临床数据。</li>
+    </ul>
+  </div>
+</div>
+</section>
+<!-- ================= 口径 ================= -->
+<section id="method">
+<div class="note">
+<h4>口径与不确定性说明</h4>
+<p><b>时间窗口：</b>北京时间 2026 年 10 月 4 日 00:00 至 10 月 11 日 12:00。排序以「对后续 1–4 周的影响力」为唯一标准，不按媒体热度。部分事件（如脑虎科技 7 月启动、DePass 9 月 24 日发表）在本周仍有产业/学界持续发酵，按"本周影响力峰值"纳入。</p>
+<p><b>信源分级：</b>标注了官方文件 / 顶刊原文 / 政府公告的条目优先级高于聚合媒体报道；同一事件尽量给出两个以上独立信源。</p>
+<p><b>待核事项：</b>2026 年诺贝尔生理学或医学奖得主信息来自中文转载媒体（The People BD 10.05），<b>具体获奖成果与颁发日期请以 NobelPrize.org 官方为准</b>；GRAIL Galleri 的 FDA 最终决议尚未公布，本页仅基于咨询委员会分歧投票与 Nature Medicine 同期发表的综合判断；"近 80 个中医药大模型"为院士主题报告口径，未含未公开模型。</p>
+<p><b>口径分歧：</b>脑机接口"全球首例"存在两种定义——博睿康 NEO 为"全球首张侵入式 BCI 三类医械注册证 + 全球首方商业化植入"，Neuralink 为"全球首例人体植入式 BCI 研究"，本页采用 NMPA 注册证口径；空山慈科技 80% 抑郁症响应率来自 10 人小样本，未达 RCT 证据等级。</p>
+<p><b>未入选说明：</b>合成生物学疗法、数字疗法、可穿戴健康监测本周无影响力可比头条，未强行挤入 Top 3，仅在「下周观察清单」提示后续窗口；GenAI 在诊断影像类目的新批产品密度较高但缺乏单条决定性事件，未独立成条。</p>
+</div>
+</section>
+</main>
+<footer>
+<div class="wrap">
+<span>智源每周热点 · 生物医学 · 2026.10.11 编报</span>
+<span>逐条标注日期与信源 · 单一信源已显式提示</span>
+</div>
+</footer>
+
+
+</body></html>
