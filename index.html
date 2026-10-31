@@ -344,6 +344,7 @@
     const REPO = 'digital-era/TrendBM'; // 请替换为实际仓库路径
     const BRANCH = 'main';
     const SITE_ORIGIN = 'https://trendbm.aivibeinvest.com'; // 请替换为实际站点域名
+    const MAX_ITEMS_PER_COLUMN = 30;   // 每个专栏最多展示的文章数
     
     // 美化显示名称
     function prettyName(filename) {
@@ -499,7 +500,9 @@
           if (db !== da) return db - da;
           return b.name.localeCompare(a.name, 'zh');
         });
-    
+
+        renderList(id, files.slice(0, MAX_ITEMS_PER_COLUMN), 'ht');
+
         renderList('list-ht', files, 'ht');
       } catch (err) {
         console.error('ht', err);
