@@ -501,9 +501,7 @@
           return b.name.localeCompare(a.name, 'zh');
         });
 
-        renderList(id, files.slice(0, MAX_ITEMS_PER_COLUMN), 'ht');
-
-        renderList('list-ht', files, 'ht');
+        renderList('list-ht', files.slice(0, MAX_ITEMS_PER_COLUMN), 'ht');
       } catch (err) {
         console.error('ht', err);
         const el = document.getElementById('list-ht');
